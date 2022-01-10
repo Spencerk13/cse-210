@@ -5,7 +5,7 @@ BLANK = ' '
 board = [BLANK,BLANK,BLANK,BLANK,BLANK,BLANK,BLANK,BLANK,BLANK]
 
 def main():
-    print("Enter 'q' to suspend your game. Otherwise, enter a number from 1 to 9")
+    print("Enter a number from 1 to 9")
     print("where the following numbers correspond to the locations on the grid:")
     print(" 1 | 2 | 3 ")
     print("---+---+---")
