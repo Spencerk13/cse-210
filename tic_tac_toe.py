@@ -1,3 +1,5 @@
+# Tic Tac Toe Game
+# Author: Spencer Kingbury
 
 X = 'X'
 O = 'O'
