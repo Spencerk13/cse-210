@@ -1,37 +1,57 @@
 import random
 
-score = 300
-def main():
-    card = card_number()
-    print(f"The card is {card} ")
-    guess = str(input("Higher or Lower? (h,l): "))
-    new_card = card_number()
-    bigger = higher_or_lower(card,new_card)
-    points(bigger,guess,score)
-def higher_or_lower(card,new_card):
-    if card > new_card:
-        return 1
-    elif card < new_card:
-        return 2
-    else:
-        return 0
-def points(bigger,guess,points):
-    if bigger.lower() == guess.lower():
-        points += 100
-    else:
-        points -=75
+class dealer:
+    def __init__(self):
+        self.value=random.randint(1,13)
+        self.score = 500
 
-def card_number():
-    return random.random(1,13)
+class Director:
+    def __init__(self):
+        self.guess = ''
+        self.card = 0
+        self.next_card = dealer().value
+        self.is_playing = True
+        self.score = dealer().score
+    def start_game(self):
+        while self.is_playing:
+            self.print_initials()
+            self.guess_card()
+            self.display_new_card()
+            self.score_updates()
+            self.do_outputs()
+            self.done()
+    def print_initials(self):
 
-def game_over(score):
-    if score>0:
-        input = str(("Play again? (y/n): "))
-        if input.lower() == "y":
-            return False
+        card1= self.next_card
+        self.card = card1
+        print(f"Your card is {card1}")
+    
+    def guess_card(self):
+        user_guess = input("Higher or lower? [h/l]")
+        self.guess= user_guess
+
+       
+    def score_updates(self):
+        if not self.is_playing:
+            return 
+        if (int(self.card)>int(self.next_card) and self.guess.lower() == "h") or (int(self.card)<int(self.next_card) and self.guess.lower() == "l"):
+            self.score -=75
+        elif (int(self.card)==int(self.next_card)):
+            self.score +=0
         else:
-            return True
-    else:
-        return True
-if __name__ == "__main__":
-    main()
+            self.score+=100
+    def display_new_card(self):
+        card2=dealer().value
+        self.next_card=card2
+        print(f"The card is {card2}")
+    def do_outputs(self):
+        if not self.is_playing:
+            return
+        print(f"Your score is: {self.score}")
+        self.is_playing == (self.score > 0)
+    def done(self):
+        deal_card = input("Deal card? [y/n]")
+        self.is_playing = (deal_card == "y")
+
+director = Director()
+director.start_game()
