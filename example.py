@@ -1,10 +1,16 @@
+class student:
+    def __init__(self,fname,lname):
+        self._fristname= fname
+        self._lastname = lname
+    def show_name(self):
+        return (f"{self._fristname} {self._lastname}")
+    @property
+    def firstname(self):
+        return self._fristname
+    @firstname.setter
+    def firstname(self,fname):
+        self._firstname = fname
+spencer = student("Spencer", "Kingsbury")
+spencer._firstname = "bob"
 
-class Person:
-    def __init__(self,full_name):
-        self.full_name = full_name
-spencer = Person("Spencer Kingsbury")
-print(spencer.full_name)
-hannah = Person("Hannah White")
-print(hannah.full_name)
-import random
-print(random.randint(1,12))
+print(spencer.show_name())
