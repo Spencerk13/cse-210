@@ -1,22 +1,24 @@
 # Jumper Specification
-First team activity (team 7) 
+Secdon team activity (team 7) 
 
 Names: Charlie Mitts mit18012@byui.edu, James Chan cha20009@byui.edu, Spencer Kingsbury kin20013@byui.edu, Samuel Casellas cas18010@byui.edu
 
 
-Date: Jan 27th, 2022
+Date: Feb 2, 2022
 
 # Code Planning
 
-There are two classes for this program:
+There are four classes for this program:
 
 1. Director
-2. Dealer
+2. Guess
+3. Puzzle
+4. Parachute
 
 The following responsibilities, behaviors, and statuses are as follows:
 
 - Director:
-1. Responsibilities - Run the game by verifying the conditions of the game are always true before each turn. Keeps track of the players cards and score. Asks the user two questions: if they want another turn and what their guess is for the card (whether higher or lower).
+1. Responsibilities - Run the game by verifying the conditions of the game are always true before each guess. Keeps track of the players guesses. Asks the user two questions: if they want another turn and what their guess is for the card (whether higher or lower).
 
 2. Behaviors:
     a. Initiate the game (main): start_game()
