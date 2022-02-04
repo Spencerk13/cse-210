@@ -31,7 +31,7 @@ class Parachute:
 
 
 
-"""
+
 # Test code
 
 parachute = Parachute()
@@ -42,4 +42,3 @@ for _ in range(4):
 
 print(parachute._end_game_image())
 
-"""
