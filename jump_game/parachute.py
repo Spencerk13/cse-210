@@ -29,12 +29,12 @@ class Parachute:
         return parachute_text
 
 
-parachute = Parachute()
-
 
 
 """
 # Test code
+
+parachute = Parachute()
 
 for _ in range(4):
     print(parachute._during_game_image())
