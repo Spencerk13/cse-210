@@ -28,18 +28,28 @@ class Parachute:
             parachute_text += unit + "\n"
         return parachute_text
 
+    def print_starting_image(self):
+        print(self._during_game_image())
+
+    def print_subsequent_image(self):
+        self._disintegrate()
+        print(self._during_game_image())
+
+    def print_end_image(self):
+        self._disintegrate()
+        print(self._end_game_image())
 
 
 
-"""
 # Test code
 
 parachute = Parachute()
 
-for _ in range(4):
-    print(parachute._during_game_image())
-    parachute._disintegrate()
+parachute.print_starting_image()
 
-print(parachute._end_game_image())
+for _ in range(3):
+    parachute.print_subsequent_image()
 
-"""
+parachute.print_end_image()
+
+
