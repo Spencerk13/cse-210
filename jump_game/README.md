@@ -1,5 +1,5 @@
 # Jumper Specification
-First team activity (team 7) 
+Second team activity (team 7) 
 
 Names: Charlie Mitts mit18012@byui.edu, James Chan cha20009@byui.edu, Spencer Kingsbury kin20013@byui.edu, Samuel Casellas cas18010@byui.edu
 

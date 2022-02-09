@@ -1,5 +1,7 @@
 import random 
+
 words = ['yes','no','maybe']
+
 class Puzzle:
     def __init__(self):
         self._puzzle = words[random.randint(0,2)]
