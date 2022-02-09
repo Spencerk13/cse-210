@@ -1,4 +1,4 @@
-from jump_game.terminal_service import TerminalService
+
 import random 
 words = ['nanometer','person','parachute', 'right', 'hair', 'snow','yellow','sunday','church',
 'guess','python','prophet','student','rat', 'angel', 'earth','sun','jump','river','beach']
@@ -12,17 +12,20 @@ class Puzzle:
         for i in range(0,length):
             self._puzzle_guess.append((" _ "))
         return(self._puzzle_guess)
-    def _guess_right(self):
+    def _guess_right(self,guess):
         for i in range(len(self._puzzle)):
-            if TerminalService._read_guess() == self._puzzle_array[i]:
+            if guess == self._puzzle_array[i]:
                 self._puzzle_guess[i] = self._puzzle_array[i]
-                print(self._puzzle_guess)
-            else:
-                print(self._puzzle_guess)
     def _game_done(self):
         for i in range(len(self._puzzle)):
             if self._puzzle_guess[i] == " _ ":
                 return False
         return True
+    def _display_puzzle(self):
+        puzzle = ''
+        for i in range(len(self._puzzle)):
+            puzzle += self._puzzle_guess[i]
+        print(puzzle)
 puzzle = Puzzle()
-print(puzzle._make_puzzle())
+puzzle._make_puzzle()
+puzzle._display_puzzle()
