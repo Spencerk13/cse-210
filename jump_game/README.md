@@ -52,11 +52,12 @@ The following responsibilities, behaviors, and statuses are as follows:
 
 
 - Puzzle:
-1. Responsibilities - randomly chooses a word from a list.
+1. Responsibilities - Randomly chooses a word from a list. Displays the length of the puzzle and puts the letter in everytime the user guesses a letter correctly.
 
 2. Behavior's:
     a. Retrieve the word chosen - self._get_puzzle()
     b. Get the size of the puzzle - self._puzzle_size()
+    c. Show the puzzle - display_puzzle()
 
 3. Status:
     a. Puzzle - self._puzzle(class)
