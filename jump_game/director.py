@@ -10,6 +10,6 @@ class Director:
             self.do_outputs()
     def do_inputs(self):
         guess = input("Guess a letter [A-Z]: ")
-
+        
     def do_outputs(self):
         print("done")
