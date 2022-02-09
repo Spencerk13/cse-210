@@ -12,9 +12,12 @@ class Director:
         while self._is_playing:
             self.do_inputs()
             self.do_outputs()
+            self._is_playing = self.puzzle.keepgoing()
+
 
     def do_inputs(self):
         self.guess = input("Guess a letter [A-Z]: ")
 
     def do_outputs(self):
+        if self.puzzle.
         print("done")
