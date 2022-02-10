@@ -1,5 +1,4 @@
 from parachute import Parachute
-from guess import Guess
 from puzzle import Puzzle
 from terminal_service import TerminalService
 
@@ -7,7 +6,6 @@ class Director:
     def __init__(self):
         self._is_playing = True
         self.parachute = Parachute()
-        self.guess = Guess()
         self.puzzle = Puzzle()
         self.terminal_service = TerminalService()
 
