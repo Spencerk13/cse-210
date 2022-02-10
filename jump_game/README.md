@@ -58,6 +58,7 @@ The following responsibilities, behaviors, and statuses are as follows:
     a. Retrieve the word chosen - self._get_puzzle()
     b. Get the size of the puzzle - self._puzzle_size()
     c. Show the puzzle - display_puzzle()
+    d. Updates the amount of the puzzle guessed - _update_puzzle()
 
 3. Status:
     a. Puzzle - self._puzzle(class)

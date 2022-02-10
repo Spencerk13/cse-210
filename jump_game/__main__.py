@@ -1,3 +1,4 @@
-from jump_game.director import Director
+from distutils.command.sdist import sdist
+from director import Director
 director = Director()
 director.start_game()
