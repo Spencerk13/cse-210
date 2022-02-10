@@ -1,6 +1,7 @@
 from jump_game.parachute import Parachute
 from jump_game.guess import Guess
 from jump_game.puzzle import Puzzle
+
 class Director:
     def __init__(self):
         self._is_playing = True
@@ -10,14 +11,18 @@ class Director:
 
     def start_game(self):
         while self._is_playing:
+            self.parachute.print_starting_image()
             self.do_inputs()
             self.do_outputs()
-            self._is_playing = self.puzzle.keepgoing()
+            if self.puzzle._game_done:
+                self._is_playing = False
+
 
 
     def do_inputs(self):
         self.guess = input("Guess a letter [A-Z]: ")
 
     def do_outputs(self):
-        if self.puzzle.
+        if 
+
         print("done")
