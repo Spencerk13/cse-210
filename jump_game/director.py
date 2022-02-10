@@ -13,9 +13,9 @@ class Director:
         self._terminal_service._write_text(self._puzzle.display_puzzle())
         self._terminal_service._write_text(self._parachute.print_image())
         while self._is_playing:
-            self.puzzle._make_puzzle()
-            self.puzzle._display_puzzle()
-            self.parachute.print_image()
+            self._puzzle._make_puzzle()
+            self._puzzle.display_puzzle()
+            self._parachute.print_image()
             self.do_inputs()
             self.do_outputs()
             self.done()
