@@ -1,6 +1,5 @@
 
 import random 
-<<<<<<< HEAD
 words = ['nanometer','person','parachute', 'right', 'hair', 'snow','yellow','sunday','church',
 'guess','python','prophet','student','rat', 'angel', 'earth','sun','jump','river','beach']
 class Puzzle:
@@ -17,6 +16,8 @@ class Puzzle:
         for i in range(len(self._puzzle)):
             if guess == self._puzzle_array[i]:
                 self._puzzle_guess[i] = self._puzzle_array[i]
+                return True
+        return False
     def _game_done(self):
         for i in range(len(self._puzzle)):
             if self._puzzle_guess[i] == " _ ":
@@ -30,15 +31,3 @@ class Puzzle:
 puzzle = Puzzle()
 puzzle._make_puzzle()
 puzzle._display_puzzle()
-=======
-
-class Puzzle:
-    def __init__(self):
-        self._words = ['yes','no','maybe']
-        self._puzzle = self._words[random.randint(0,2)]
-    def get_puzzle(self):
-        return 
-    def puzzle_size(self):
-        length = len(self._puzzle)
-        return length
->>>>>>> samuel

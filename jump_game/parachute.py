@@ -38,7 +38,7 @@ class Parachute:
 
 
 # Test code
-
+"""
 parachute = Parachute()
 
 parachute.print_starting_image()
@@ -47,3 +47,5 @@ for _ in range(3):
     parachute.print_subsequent_image()
 
 parachute.print_end_image()
+"""
+
