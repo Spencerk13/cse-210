@@ -11,25 +11,22 @@ class Director:
 
     def start_game(self):
         while self._is_playing:
-            self.parachute.print_starting_image()
+            self.parachute.print_image()
             self.do_inputs()
             self.do_outputs()
-<<<<<<< HEAD
             if self.puzzle._game_done:
                 self._is_playing = False
 
 
 
-=======
-
-            
->>>>>>> 96d18481e43a6206a2371b86436d1acc984d5a7a
     def do_inputs(self):
         self.guess = input("Guess a letter [A-Z]: ")
 
     def do_outputs(self):
-        if not self.puzzle._game_done():
-            self.parachute._during_game_image()
-            
+        if not self.puzzle._game_done() and not self.puzzle._guess_right():
+            self.parachute.update_image()
+        
+
+
 
         print("done")
