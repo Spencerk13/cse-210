@@ -23,6 +23,8 @@ class Director:
         self.guess = input("Guess a letter [A-Z]: ")
 
     def do_outputs(self):
-        if 
+        if not self.puzzle._game_done():
+            self.parachute._during_game_image()
+            
 
         print("done")
