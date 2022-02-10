@@ -37,7 +37,7 @@ The following responsibilities, behaviors, and statuses are as follows:
     e. Player's lives - dealer.life (int)
 
 - Terminal Service:
-1. Responsibilities - Get input entered by the user and send it to the director. Write out prompts       for the user to enter information for.
+1. Responsibilities - Get input entered by the user and send it to the director. Write out prompts for the user to enter information for.
 2. Behavoir's:
     a. Read text entered by user: _read_text()
     b. Read the users guess they inputed: _read_guess()

@@ -14,11 +14,16 @@ class Director:
             self.parachute.print_starting_image()
             self.do_inputs()
             self.do_outputs()
+<<<<<<< HEAD
             if self.puzzle._game_done:
                 self._is_playing = False
 
 
 
+=======
+
+            
+>>>>>>> 96d18481e43a6206a2371b86436d1acc984d5a7a
     def do_inputs(self):
         self.guess = input("Guess a letter [A-Z]: ")
 

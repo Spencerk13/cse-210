@@ -16,6 +16,8 @@ class Puzzle:
         for i in range(len(self._puzzle)):
             if guess == self._puzzle_array[i]:
                 self._puzzle_guess[i] = self._puzzle_array[i]
+                return True
+        return False
     def _game_done(self):
         for i in range(len(self._puzzle)):
             if self._puzzle_guess[i] == " _ ":

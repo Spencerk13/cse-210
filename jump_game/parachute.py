@@ -12,9 +12,6 @@ class Parachute:
             "             ",
             "^^^^^^^^^^^^^"
         ]
-    
-    def _disintegrate(self):
-        self._parachute.remove(self._parachute[0])
 
     def _during_game_image(self):
         parachute_text = ""
@@ -29,12 +26,11 @@ class Parachute:
             parachute_text += unit + "\n"
         return parachute_text
 
-    def print_starting_image(self):
+    def print_image(self):
         print(self._during_game_image())
 
-    def print_subsequent_image(self):
-        self._disintegrate()
-        print(self._during_game_image())
+    def update_image(self):
+        self._parachute.remove(self._parachute[0])
 
     def print_end_image(self):
         self._disintegrate()
@@ -43,7 +39,7 @@ class Parachute:
 
 
 # Test code
-
+"""
 parachute = Parachute()
 
 parachute.print_starting_image()
@@ -52,3 +48,5 @@ for _ in range(3):
     parachute.print_subsequent_image()
 
 parachute.print_end_image()
+"""
+
