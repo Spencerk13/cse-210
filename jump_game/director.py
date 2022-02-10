@@ -14,7 +14,12 @@ class Director:
             self.do_inputs()
             self.do_outputs()
     def do_inputs(self):
+<<<<<<< HEAD
         guess = self._terminal_service.read_number("\nTry to guess a letter ")
 
+=======
+        guess = input("Guess a letter [A-Z]: ")
+        
+>>>>>>> samuel
     def do_outputs(self):
         print("done")
