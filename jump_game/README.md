@@ -1,5 +1,9 @@
 # Jumper Specification
+<<<<<<< HEAD
+Second team activity (team 7) 
+=======
 Secdon team activity (team 7) 
+>>>>>>> fd2f978eb9a6924bef7a430627e1f8e8df79d517
 
 Names: Charlie Mitts mit18012@byui.edu, James Chan cha20009@byui.edu, Spencer Kingsbury kin20013@byui.edu, Samuel Casellas cas18010@byui.edu
 
