@@ -1,32 +1,37 @@
-
 import random
-words = ['nanometer','person','parachute', 'right', 'hair', 'snow','yellow','sunday','church',
-'guess','python','prophet','student','rat', 'angel', 'earth','sun','jump','river','beach']
+
 class Puzzle:
     def __init__(self):
-        self._puzzle = words[random.randint(0,19)]
+        self._words = ['nanometer','person','parachute', 'right', 'hair', 'snow','yellow','sunday','church','guess','python','prophet','student','rat', 'angel', 'earth','sun','jump','river','beach']
+        self._puzzle = self._words[random.randint(0,19)]
         self._puzzle_array = list(self._puzzle)
         self._puzzle_guess = []
-    def _make_puzzle(self):
+
+    def make_puzzle(self):
         length = len(self._puzzle)
         for i in range(0,length):
-            self._puzzle_guess.append((" _ "))
+            self._puzzle_guess.append("_")
         return(self._puzzle_guess)
+
     def guess_right(self,guess):
+        match_found = False
         for i in range(len(self._puzzle)):
             if guess.lower() == self._puzzle_array[i]:
                 self._puzzle_guess[i] = self._puzzle_array[i]
-        if guess.lower() not in self._puzzle_array:
-            return False
+                match_found = True
+        return match_found
+
     def get_puzzle(self):
         return self._puzzle
+        
     def game_done(self):
         for i in range(len(self._puzzle)):
-            if self._puzzle_guess[i] == " _ ":
+            if self._puzzle_guess[i] == "_":
                 return False
         return True
+
     def display_puzzle(self):
-        puzzle = ''
+        puzzle = ""
         for i in range(len(self._puzzle)):
-            puzzle += self._puzzle_guess[i]
+            puzzle += self._puzzle_guess[i] + " "
         return puzzle

@@ -1,10 +1,10 @@
 class TerminalService:
      
-    def _read_text(self, prompt):
-        return input(prompt)
-
-    def _read_guess(self, prompt):
+    def read_guess(self, prompt):
         return (input(prompt))
         
-    def _write_text(self, text):
-        print(text)
+    def write_text(self, text, newline=True):
+        if newline:
+            print(text)
+        else:
+            print(text, end="")
