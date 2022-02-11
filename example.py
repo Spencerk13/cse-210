@@ -1,3 +1,4 @@
+"""
 class student:
     def __init__(self,fname,lname):
         self._fristname= fname
@@ -14,3 +15,8 @@ spencer = student("Spencer", "Kingsbury")
 spencer._firstname = "bob"
 
 print(spencer.show_name())
+"""
+puzzle_guess=[]
+for i in range(0,3):
+    puzzle_guess.append((" _ "))
+print(puzzle_guess)

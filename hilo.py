@@ -52,6 +52,6 @@ class Director:
     def done(self):
         deal_card = input("Deal card? [y/n]")
         self.is_playing = (deal_card == "y")
-
+        
 director = Director()
 director.start_game()

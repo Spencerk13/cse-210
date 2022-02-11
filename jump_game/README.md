@@ -1,5 +1,5 @@
 # Jumper Specification
-Secdon team activity (team 7) 
+Second team activity (team 7) 
 
 Names: Charlie Mitts mit18012@byui.edu, James Chan cha20009@byui.edu, Spencer Kingsbury kin20013@byui.edu, Samuel Casellas cas18010@byui.edu
 
@@ -12,54 +12,64 @@ There are four classes for this program:
 
 1. Director
 2. Terminal Service
-3. Puzzle
-4. Parachute
+3. Parachute
+4. Puzzle
 
 The following responsibilities, behaviors, and statuses are as follows:
 
-
 - Director:
-1. Responsibilities - Run the game by verifying the conditions of the game are always true before each guess. Keeps track of the players guesses. Asks the user two questions: if they want another turn and what their guess is for the card (whether higher or lower).
+1. Responsibilities - Run the game by verifying the conditions of the game are always true before each guess. Keeps track of the players guesses. Asks the user for the next letter.
 
 2. Behaviors:
-    a. Initiate the game (main): start_game()
-    b. Has the user guess a letter: guess_word()
-
+    a. Initiate the game (main) - start_game()
+    b. Has the user guess a letter - _do_inputs()
+    c. Contain conditions for and show the outputs of if the guess is right or not, update the image accordingly, and display guessed letters - _do_outputs()
+    d. Check to see if the player is still playing - _still_playing()
 
 3. Status:
-    a. Dealer - self._dealer (class)
-    c. Next Guess - self._guess (str)
-    d. Playing? - self._is_playing (bool)
-    e. Player's lives - dealer.life (int)
+    a. Playing? - self._is_playing (bool)
+    b. Knows a parachute - self._parachute (class)
+    c. Knows a puzzle - self._puzzle (class)
+    d. Knows a terminal service - self._terminal_service (class)
+    e. Player's lives - self._lives (int)
+    f. Player's guesses - self._guesses (list)
 
 - Terminal Service:
-1. Responsibilities - Get input entered by the user and send it to the director. Write out prompts       for the user to enter information for.
-2. Behavoir's:
-    a. Read text entered by user: _read_text()
-    b. Read the users guess they inputed: _read_guess()
-    c. Prompt the user for another guess: _write_text()
+
+1. Responsibilities - Get input entered by the user and send it to the director. Write out prompts for the user to enter information for.
+2. Behavoirs:
+    a. Read the users guess they inputed: read_guess()
+    c. Prompt the user for another guess: write_text()
 3. Status:
-    a. Terminal Service - self._display(class)
+    (None)
 
 - Parachute:
-1. Responsibilities - Display a person with a parachute with a certain a mount of lines. Keep track of how much of the parachute is left, and remove a line if the user guesses a wrong value.
-2. Behavoir's: 
-    a. Removes part of the person's parachute if they guess a value wrong: _disintegrate()
-    b. Gets how much of the parachute is left and displays it to the director: _during_game_image()
-    c. Finds out if the game is over if the parachute is gone: _end_game_image()
+
+1. Responsibilities - Display a person with a parachute with a certain amount of lines. Keep track of how much of the parachute is left, and remove a line if the user guesses a wrong letter.
+2. Behaviors: 
+    a. Return the current image - image()
+    b. Removes a layer from the top of the parachute - update_image()
+    c. Return the game over image - game_over_image()
 3. Status:
-    a. Parachute - self._parachute(class)
+    a. Parachute image - self._parachute (list)
 
 
 - Puzzle:
-1. Responsibilities - randomly chooses a word from a list.
 
-2. Behavior's:
-    a. Retrieve the word chosen - self._get_puzzle()
-    b. Get the size of the puzzle - self._puzzle_size()
+1. Responsibilities - Randomly chooses a word from a list. Displays the length of the puzzle and puts the letter in everytime the user guesses a letter correctly.
+
+2. Behaviors:
+    a. Make the puzzle: - make_puzzle()
+    b. Check to see if the letter selected is correct - guess_right(guess)
+    a. Retrieve the word chosen - get_puzzle()
+    d. Check if the game is done - game_done()
+    c. Show the puzzle - display_puzzle()
 
 3. Status:
-    a. Puzzle - self._puzzle(class)
+    a. List of words to pick from - self._words (list)
+    b. The word to solve - self._puzzle (str)
+    c. The puzzle in the form of an array - self._puzzle_array (list)
+    d. The players correctly guessed letters matching with the spaces of the puzzle - self._puzzle_guess (list)
 
     
 # Required software
